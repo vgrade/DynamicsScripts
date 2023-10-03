@@ -20,7 +20,7 @@ $CreateAccount_Fieldvalues = @{
 }
 $newAccountGuid = New-CrmRecord  -EntityLogicalName account -Fields  $CreateAccount_Fieldvalues
 
-# Create a account record with text, optionset, boolean, datetime and lookup type fields
+# Create a contact  record with text, optionset, boolean, datetime and lookup type fields
 # Make newly created account as parentcustomer of contact
 $parentcustomerid = [Microsoft.Xrm.Sdk.EntityReference]::new("account", [Guid]::new($newAccountGuid))
 $preferredcontactmethodcode = [Microsoft.Xrm.Sdk.OptionSetValue]::new(2) #Email
