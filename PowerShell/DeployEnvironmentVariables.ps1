@@ -48,7 +48,7 @@ else {
   $conn = Get-CrmConnection -ConnectionString "AuthType=ClientSecret;
   url=$env:destinationEnvironmenturl;
   ClientId=$env:app_dynamics365_crmdeploy_clientid;
-  ClientSecret=$env:app_dynamics365_crmdeploy_secret"
+  ClientSecret=$env:ClientSecretValue"
 
    Write-Host "log:Connected to crm org " $conn.ConnectedOrgFriendlyName
 
